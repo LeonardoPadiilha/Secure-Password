@@ -12,16 +12,16 @@ public class PasswordService {
     public List<String> validate(String pass ){
         List<String> failures = new ArrayList();
 
-        validadeLenght(pass, failures);
+        validateLenght(pass, failures);
         validateUpperCase(pass, failures);
         validateLowerCase(pass, failures);
-        validadeNumber(pass, failures);
+        validateNumber(pass, failures);
         validateSpecialCharacter(pass, failures);
 
         return failures;
     }
 
-    private void validadeLenght(String pass, List<String> failures) {
+    private void validateLenght(String pass, List<String> failures) {
         if (pass.isBlank() || pass.length() < 8) {
             failures.add("Password length must be between 8 and 16 characters");
         }
@@ -40,7 +40,7 @@ public class PasswordService {
         }
     }
 
-    private void validadeNumber(String pass, List<String> failures) {
+    private void validateNumber(String pass, List<String> failures) {
         if (!Pattern.matches(".*[0-9].*", pass)) {
             failures.add("Password must be Number characters");
         }
