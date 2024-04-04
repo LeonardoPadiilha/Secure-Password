@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 public class PasswordService {
 
     public List<String> validate(String pass ){
-        List<String> failures = new ArrayList();
+        List<String> failures = new ArrayList<>();
 
         validateLenght(pass, failures);
         validateUpperCase(pass, failures);
