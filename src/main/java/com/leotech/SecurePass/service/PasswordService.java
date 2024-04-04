@@ -12,7 +12,7 @@ public class PasswordService {
     public List<String> validate(String pass ){
         List<String> failures = new ArrayList<>();
 
-        validateLenght(pass, failures);
+        validateLength(pass, failures);
         validateUpperCase(pass, failures);
         validateLowerCase(pass, failures);
         validateNumber(pass, failures);
@@ -21,7 +21,7 @@ public class PasswordService {
         return failures;
     }
 
-    private void validateLenght(String pass, List<String> failures) {
+    private void validateLength(String pass, List<String> failures) {
         if (pass.isBlank() || pass.length() < 8) {
             failures.add("Password length must be between 8 and 16 characters");
         }
