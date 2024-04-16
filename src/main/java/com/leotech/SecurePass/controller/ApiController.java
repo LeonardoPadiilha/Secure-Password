@@ -1,7 +1,6 @@
 package com.leotech.SecurePass.controller;
 
 import com.leotech.SecurePass.service.PasswordService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
